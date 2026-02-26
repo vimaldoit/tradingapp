@@ -18,13 +18,13 @@ class AppColors {
   static const LinearGradient bottomNavGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [Color(0xFF635BFF), Color(0xFF4C40C3)],
+    colors: [Color(0xFF6768E1), Color(0xFF4A419C)],
   );
 
   static const LinearGradient watchlistGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFF4FACFE), Color(0xFFB993FF)],
+    colors: [Color(0xFF436EDD), Color(0xFFAF7CE3), Color(0xFFAF69C7)],
   );
 
   static const Color buy = Color(0xFF2979FF);

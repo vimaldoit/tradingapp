@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tradingapp/core/widgets/app_bottom_navigation.dart';
-import 'package:tradingapp/features/indian_market/presentation/pages/indian_market_screen.dart';
+import 'package:tradingapp/features/market_watch/presentation/pages/indian_market_screen.dart';
 import 'package:tradingapp/features/navigation/presentation/bloc/bottomnavigation_bloc.dart';
 
 class MainWraperScreen extends StatelessWidget {

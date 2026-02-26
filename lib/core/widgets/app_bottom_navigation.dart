@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tradingapp/core/constants/images.dart';
 import '../theme/app_colors.dart';
 import '../../features/navigation/presentation/bloc/bottomnavigation_bloc.dart';
 
@@ -16,7 +18,6 @@ class AppBottomNavigation extends StatelessWidget {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              // Custom Background Shape
               Positioned(
                 bottom: 0,
                 left: 0,
@@ -26,7 +27,7 @@ class AppBottomNavigation extends StatelessWidget {
                   painter: BottomNavPainter(),
                 ),
               ),
-              // Main Navigation Items
+
               Positioned(
                 bottom: 0,
                 left: 0,
@@ -39,14 +40,14 @@ class AppBottomNavigation extends StatelessWidget {
                       _buildNavItem(
                         context,
                         0,
-                        Icons.star_border,
+                        AppImages.favIcon,
                         'My Favorites',
                         state.index,
                       ),
                       _buildNavItem(
                         context,
                         1,
-                        Icons.shopping_bag_outlined,
+                        AppImages.orderIcon,
                         'Order',
                         state.index,
                       ),
@@ -54,14 +55,14 @@ class AppBottomNavigation extends StatelessWidget {
                       _buildNavItem(
                         context,
                         3,
-                        Icons.bar_chart,
+                        AppImages.positionIcon,
                         'Positions',
                         state.index,
                       ),
                       _buildNavItem(
                         context,
                         4,
-                        Icons.account_balance_wallet_outlined,
+                        AppImages.walletIcon,
                         'Wallet',
                         state.index,
                       ),
@@ -69,7 +70,7 @@ class AppBottomNavigation extends StatelessWidget {
                   ),
                 ),
               ),
-              // Floating Watchlist Button
+
               Positioned(
                 bottom: 15,
                 left: MediaQuery.of(context).size.width / 2 - 24,
@@ -92,11 +93,6 @@ class AppBottomNavigation extends StatelessWidget {
                               offset: const Offset(0, 4),
                             ),
                           ],
-                        ),
-                        child: const Icon(
-                          Icons.remove_red_eye_outlined,
-                          color: Colors.white,
-                          size: 22,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -126,7 +122,7 @@ class AppBottomNavigation extends StatelessWidget {
   Widget _buildNavItem(
     BuildContext context,
     int index,
-    IconData icon,
+    String icon,
     String label,
     int currentIndex,
   ) {
@@ -138,10 +134,18 @@ class AppBottomNavigation extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              color: isSelected ? Colors.white : Colors.white.withOpacity(0.6),
-              size: 24,
+            SizedBox(
+              width: 22,
+              height: 22,
+
+              child: SvgPicture.asset(
+                icon,
+                color: isSelected
+                    ? Colors.white
+                    : Colors.white.withOpacity(0.6),
+                width: 22,
+                height: 22,
+              ),
             ),
             const SizedBox(height: 4),
             Text(
