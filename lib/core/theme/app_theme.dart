@@ -10,7 +10,7 @@ class AppTheme {
     useMaterial3: true,
 
     scaffoldBackgroundColor: AppColors.scaffold,
-
+    hintColor: AppColors.hintColor,
     colorScheme: ColorScheme.light(
       primary: AppColors.primary,
       secondary: AppColors.secondary,
@@ -68,18 +68,18 @@ class AppTheme {
       filled: true,
       fillColor: AppColors.searchBackground,
       hintStyle: const TextStyle(color: AppColors.textSecondary),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      contentPadding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 12.h),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(5.r),
         borderSide: const BorderSide(color: AppColors.searchBorder),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(5.r),
         borderSide: const BorderSide(color: AppColors.searchBorder),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: AppColors.primary),
+        borderRadius: BorderRadius.circular(5.r),
+        borderSide: const BorderSide(color: AppColors.textSecondary),
       ),
     ),
 

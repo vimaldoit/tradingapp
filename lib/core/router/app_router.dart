@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tradingapp/features/market_watch/presentation/pages/indian_market_screen.dart';
+import 'package:tradingapp/features/market_watch/presentation/pages/market_watch_screen.dart';
 import 'package:tradingapp/features/navigation/presentation/bloc/bottomnavigation_bloc.dart';
 import 'package:tradingapp/features/navigation/presentation/pages/main_wraper_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +18,7 @@ class AppRouter {
           child: MainWraperScreen(),
         ),
       ),
-      GoRoute(path: home, builder: (context, state) => IndianMarketScreen()),
+      GoRoute(path: home, builder: (context, state) => MarketWatchScreen()),
     ],
   );
 }
